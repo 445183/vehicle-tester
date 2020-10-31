@@ -35,7 +35,7 @@ function draw(){
     bugati.velocityX=random(55,90);
     weight=random(400,1500);
   }
-  
+  if(w1.x-mercedes.x<=mercedes.width/2+w1.width/2 && w2.x-ferari.x<=ferari.width/2+w2.width/2 && w3.x-bugati.x<=bugati.width/2+w3.width/2){
       if(d1<80 ){
         mercedes.shapeColor="green";
       }
@@ -63,4 +63,5 @@ function draw(){
       if(d3>180 ){
         bugati.shapeColor="red";
       }
+  }
 }
