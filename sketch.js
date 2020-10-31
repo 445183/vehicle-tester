@@ -21,9 +21,6 @@ function draw(){
   background("black");
   drawSprites();
 
-  s1=mercedes.velocityX;
-  s2=ferari.velocityX;
-  s3=bugati.velocityX;
   
   mercedes.collide(w1);
   ferari.collide(w2);
@@ -39,6 +36,14 @@ function draw(){
     bugati.velocityX=random(55,90);
     weight=random(400,1500);
   }
+  s1=mercedes.velocityX;
+  s2=ferari.velocityX;
+  s3=bugati.velocityX;
+  
+  d1=s1*s1*weight*0.5/22500;
+  d2=s2*s2*weight*0.5/22500;
+  d3=s3*s3*weight*0.5/22500;
+  
   if(w1.x-mercedes.x<=mercedes.width/2+w1.width/2 ){
       if(d1<80 ){
         mercedes.shapeColor="green";
