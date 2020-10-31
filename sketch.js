@@ -15,6 +15,15 @@ function setup(){
   w1=createSprite(900,100,15,175);
   w2=createSprite(900,300,15,175);
   w3=createSprite(900,500,15,175);
+
+  mercedes.velocityX=random(55,90);
+  ferari.velocityX=random(55,90);
+  bugati.velocityX=random(55,90);
+  weight=random(400,1500);
+
+  s1=mercedes.velocityX;
+  s2=ferari.velocityX;
+  s3=bugati.velocityX;
 }
 
 function draw(){
@@ -31,14 +40,10 @@ function draw(){
   d3=s3*s3*weight*0.5/22500;
 
   if(keyDown("space")){
-    mercedes.velocityX=random(55,90);
-    ferari.velocityX=random(55,90);
-    bugati.velocityX=random(55,90);
-    weight=random(400,1500);
+    
   }
-  s1=mercedes.velocityX;
-  s2=ferari.velocityX;
-  s3=bugati.velocityX;
+  
+  
   
   d1=s1*s1*weight*0.5/22500;
   d2=s2*s2*weight*0.5/22500;
