@@ -35,35 +35,39 @@ function draw(){
     bugati.velocityX=random(55,90);
     weight=random(400,1500);
   }
-  if(d1<80 ){
-    mercedes.shapeColor="green";
+  if(mercedes.isTouching(w1)){
+      if(d1<80 ){
+        mercedes.shapeColor="green";
+      }
+      if(d1<180 && d1>80){
+        mercedes.shapeColor="yellow";
+      }
+      if(d1>180 ){
+        mercedes.shapeColor="red";
+      } 
   }
-  if(d1<180 && d1>80){
-    mercedes.shapeColor="yellow";
+  if(ferari.isTouching(w2)){
+      if(d2<80 ){
+        ferari.shapeColor="green";
+      }
+      if(d2<180 && d2>80){
+        ferari.shapeColor="yellow";
+      }
+      if(d2>180 ){
+        ferari.shapeColor="red";
+      }  
   }
-  if(d1>180 ){
-    mercedes.shapeColor="red";
+  if(bugati.isTouching(w3)){
+      if(d3<80 ){
+        bugati.shapeColor="green";
+      }
+      if(d3<180 && d3>80){
+        bugati.shapeColor="yellow";
+      }
+      if(d3>180 ){
+        bugati.shapeColor="red";
+      }
   } 
-
-  if(d2<80 ){
-    ferari.shapeColor="green";
-  }
-  if(d2<180 && d2>80){
-    ferari.shapeColor="yellow";
-  }
-  if(d2>180 ){
-    ferari.shapeColor="red";
-  }  
-
-  if(d3<80 ){
-    bugati.shapeColor="green";
-  }
-  if(d3<180 && d3>80){
-    bugati.shapeColor="yellow";
-  }
-  if(d3>180 ){
-    bugati.shapeColor="red";
-  }
 
 
 }
