@@ -1,6 +1,6 @@
 var mercedes,ferari,bugati;
 var wall1,wall2,w1,w2,w3;
-var weight,d1,d2,d3;
+var weight,d1,d2,d3,s1,s2,s3;
 
 function setup(){
   createCanvas(1000,600);
@@ -21,13 +21,17 @@ function draw(){
   background("black");
   drawSprites();
 
+  s1=mercedes.velocityX;
+  s2=ferari.velocityX;
+  s3=bugati.velocityX;
+  
   mercedes.collide(w1);
   ferari.collide(w2);
   bugati.collide(w3);
   
-  d1=mercedes.velocityX*mercedes.velocityX*weight*0.5/22500;
-  d2=ferari.velocityX*ferari.velocityX*weight*0.5/22500;
-  d3=bugati.velocityX*bugati.velocityX*weight*0.5/22500;
+  d1=s1*s1*weight*0.5/22500;
+  d2=s2*s2*weight*0.5/22500;
+  d3=s3*s3*weight*0.5/22500;
 
   if(keyDown("space")){
     mercedes.velocityX=random(55,90);
